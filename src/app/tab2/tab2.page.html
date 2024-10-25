@@ -1,0 +1,42 @@
+<!-- TODO: Una pestaña debe tener su foto y un link que me lleve al repositorio de github de la propia aplicación. -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>2. Repositorio de GitHub: </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Content -->
+  <ion-card>
+    <ion-card-header style="flex: 1; justify-content: center">
+      <div>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img
+              alt="Silhouette of a person's head"
+              src="https://avatars.githubusercontent.com/u/92609657?v=4"
+            />
+          </ion-avatar>
+          <ion-label>David Vela</ion-label>
+        </ion-item>
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      Adjunto en esta página usted encontrará el repositorio que contiene el
+      código fuente de esta aplicación. Solo debe dar click en el enlace y
+      abrirlo en su navegador.
+    </ion-card-content>
+    
+    <div style="text-align: center; padding: 5%">
+      <ion-button shape="round" color="dark" href="https://github.com/Davidvela-306">
+        <ion-icon name="logo-github"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,43 @@
+<!-- TODO:  Una pestaña permitirá calcular las raices de una ecuación cuadrática.-->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Calcular raíces de una ecuación cuadrática:</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label style="color: red;">a:</ion-label>
+          <ion-input type="number" [(ngModel)]="a"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label style="color: red;">b:</ion-label>
+          <ion-input type="number" [(ngModel)]="b"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label style="color: red;">c:</ion-label>
+          <ion-input type="number" [(ngModel)]="c"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center; padding: 10px;">
+        <ion-button color="secondary" (click)="calcularRaices()">Calcular raíces</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label style="color: red;">Resultado:</ion-label>
+        <br>
+        <ion-text>{{ resultado }}</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
