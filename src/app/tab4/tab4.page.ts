@@ -7,14 +7,19 @@ import { File } from '@ionic-native/file/ngx';
   styleUrls: ['tab4.page.scss']
 })
 export class Tab4Page {
-  texto: string = '';
+  texto: string='';
 
-  constructor(private file: File) {}
+  constructor(private file: File) { }
 
   guardarTexto() {
-    const fileName = 'texto.txt';
-    const filePath = this.file.dataDirectory + fileName;
-    this.file.writeExistingFile(this.file.dataDirectory, fileName, this.texto)
+    if (!this.texto) {
+      console.error('No hay texto para guardar');
+      return;
+    }
+
+    const fileName='texto.txt';
+
+    this.file.writeFile(this.file.dataDirectory, fileName, this.texto, { replace: true })
       .then(() => {
         console.log('Texto guardado correctamente');
       })
